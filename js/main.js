@@ -1,5 +1,5 @@
 // for add class to make backGround at navBar while scrolling
-window.addEventListener("scroll", function () {
+addEventListener("scroll", function () {
   const nav = document.querySelector(".navbar");
   nav.classList.toggle("sticky", window.scrollY >= 100);
 });
@@ -8,12 +8,11 @@ const menubtn = document.getElementById("menubtn");
 const menu = document.getElementById("menu");
 menubtn.addEventListener("click", () => {
   menu.classList.toggle("active");
-  ico.classList.add("active");
+  ico.classList.toggle("active");
 });
 menu.onclick = () => {
   menu.classList.remove('active')
-  
-  
+  ico.classList.remove("active");
 }
 //for active class
 const filteritem = document.querySelector(".filter-projects");
@@ -138,5 +137,19 @@ function colorSelector() {
     document.documentElement.style.setProperty('--main-color',e.target.getAttribute("data-value"))
   })
 }
-
 colorSelector()
+
+// Animate library
+AOS.init({
+  offset: 150,
+  delay: 100,
+  duration: 400
+});
+
+
+
+
+
+
+
+

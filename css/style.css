@@ -34,7 +34,6 @@ Start Styling Landing Page
   text-transform: capitalize;
   transition: all 0.3s ease;
   z-index: 1000;
-  animation: slidedown 1s both ease;
 }
 
 .navbar.sticky {
@@ -128,7 +127,6 @@ nav.sticky .menu li a:hover {
   bottom: 30px;
   opacity: 1;
   pointer-events: auto;
-  animation: slidedown 1s both ease;
 }
 
 /* start home section style */
@@ -150,25 +148,22 @@ nav.sticky .menu li a:hover {
 }
 
 .home .max-width {
-  margin: auto 0 auto 40px;
+  margin: auto 80px;
 }
 
 .home .home-content .text1 {
   font-size: 27px;
-  animation: zoomInDown 0.5s both ease;
 }
 
 .home .home-content .text2 {
   font-size: 70px;
   font-weight: 600;
   margin-left: -3px;
-  animation: zoomInDown 0.5s both ease;
 }
 
 .home .home-content .text3 {
   font-size: 45px;
   margin: 5px 0;
-  animation: zoomInDown 0.5s both ease;
 }
 
 .home .home-content .text3 span {
@@ -188,17 +183,13 @@ nav.sticky .menu li a:hover {
   border: 2px solid var(--main-color);
   transition: all 0.5s ease;
   user-select: none;
-  animation: zoomInDown 0.5s both ease;
+
 }
 .home .home-content .hiring:hover {
   color: var(--main-color);
   background: none;
 }
-.rating,
-.rating_counter {
-  cursor: pointer;
-  animation: zoomInDown 0.5s both ease;
-}
+
 .rating {
   display: inline-block;
   background: var(--main-color);
@@ -210,8 +201,8 @@ nav.sticky .menu li a:hover {
   border-radius: 4px;
   border: 2px solid var(--main-color);
   transition: all 0.5s ease;
+  cursor: pointer;
   user-select: none;
-  animation: zoomInDown 0.5s both ease;
 }
 .rating_counter {
   padding-left: 7px;
@@ -226,23 +217,22 @@ nav.sticky .menu li a:hover {
   align-items: center;
   margin-top: 30px;
   margin-left: 0;
-  /* position: absolute; */
+  position: relative;
   width: 400px;
   height: 80px;
-  animation: zoomInDown 0.5s both ease;
   /* background-color: #22D172; */
 }
 .main_color span {
   border-radius: 3px;
   cursor: pointer;
   margin: 3px;
-  width: 25%;
-  height: 90%;
+  width: 17%;
+  height: 50%;
 }
 .main_color p {
   position: absolute;
-  top: -25px;
-  left: 18%;
+  top: -8px;
+  left: 5%;
   font-weight: 600;
   font-size: 20px;
 }
@@ -279,13 +269,11 @@ nav.sticky .menu li a:hover {
     0% 80%,
     0% 20%
   );
-  animation: zoomInDown 0.5s both ease;
 }
 
 .home-content .social-acc {
   display: flex;
   margin-top: 30px;
-  animation: zoomInDown 0.5s both ease;
 }
 .home-content .social-acc a {
   margin-right: 35px;
@@ -500,14 +488,16 @@ Start Styling Services
 .services .serv-content .card:hover i {
   color: #fff;
 }
+.services .serv-content .card .text {
+  font-family: "ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 30px 0 7px 0;
+  color: var(--main-color);
+}
 .services .serv-content .card:hover .text {
   transition: 0.3s;
   color: var(--main-color);
-}
-.services .serv-content .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 30px 0 7px 0;
 }
 
 /************************ 
@@ -670,15 +660,6 @@ Start Styling Projects
 }
 .project-contnet .project-box.show {
   display: block;
-  animation: animate 0.5s ease;
-}
-@keyframes animate {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .project-box p {
   margin-bottom: 20px;
@@ -1101,47 +1082,3 @@ footer span a:hover {
   }
 }
 
-@keyframes slidedown {
-  0% {
-    transform: translateY(-100%);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes slideInDown {
-  0% {
-    transform: translateY(-100%);
-    visibility: visible;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomInDown {
-  0% {
-    opacity: 0;
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  60% {
-    opacity: 1;
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-@keyframes zoomInDown {
-  0% {
-    opacity: 0;
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  60% {
-    opacity: 1;
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
